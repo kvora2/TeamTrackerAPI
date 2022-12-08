@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-12">
+        <h2>Departments <a href="/departments/add" class="btn btn-success pull-right">Add New
+Department</a></h2>
+        <hr>
+        <div class="tableresponsive">
+            <table class="table">
+                {{#each departments}}
+                <tr>
+                    <td><a href="/department/{{departmentId}}">{{departmentName}}</a></td>
+                    <td> {{departmentName}} </td>
+                </tr>
+                {{/each}}
+                <div class="col-md-12 text-center">
+                    <strong>{{message}}</strong>
+                </div>
+            </table>
+        </div>
+    </div>
+</div>
