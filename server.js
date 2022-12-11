@@ -7,8 +7,8 @@ other source
 *
 * Name: Kelvin Vora  Student ID: 157616210 Date: 11th Dec 2022
 *
-* Your app’s URL (from Heroku) : 
-
+* Your app’s URL (from cyclic) : 
+https://panicky-toad-scrubs.cyclic.app 
 *
 **************************************************************************/
 
