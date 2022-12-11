@@ -48,8 +48,6 @@ var Department = sequelize.define('Department', {
     departmentName: Sequelize.STRING
 }, {createdAt: false, updatedAt: false});
 
-// Department.hasMany(Employee);
-
 // In the below function, employees and departments var will be populated if the files are readable
 exports.initialize = () => {
     return new Promise((resolve, reject) => {
