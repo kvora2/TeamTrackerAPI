@@ -15,8 +15,8 @@ let User;
 
 exports.initialize = () => {
     return new Promise((res, rej) => {
-        let pass1 = encodeURIComponent("Kelvin@1234");
-        db = mongoose.createConnection(`mongodb+srv://KelvinV:${pass1}@senecaweb.rzvicok.mongodb.net/web322_week8?retryWrites=true&w=majority`);
+        let pass1 = encodeURIComponent("qN4Fzt7y69YQY4ON");
+        db = mongoose.createConnection(`mongodb+srv://KelvinV:${pass1}@empdata.8dltm07.mongodb.net/?retryWrites=true&w=majority`);
         if (db) {
             User = db.model("users", userSchema);
             res();
@@ -37,7 +37,6 @@ exports.registerUser = (userData) => {
         }
         else {
             bcrypt.hash(userData.password, 10).then(hash => { // Hash the password using a Salt that was generated using 10 rounds
-                // TODO: Store the resulting "hash" value in the DB
                 userData.password = hash;
             }).catch((err) => {
                 console.log(err); // Show any errors that occurred during the process
@@ -60,15 +59,11 @@ exports.checkUser = (userData) => {
     return new Promise((res, rej) => {
         User.findOne({ userName: userData.userName }).exec().then((user_) => {
             if (!user_) {
-                console.log("HERE");
                 rej(`Unable to find user: ${userData.userName}`);
             }
             const salt = bcrypt.genSaltSync(10);
             const hash = bcrypt.hashSync(user_.password, salt);
             bcrypt.compare(userData.password, hash).then((result) => {
-                console.log(userData.password)
-                console.log(hash)
-                console.log(result)
                 // result === true
                 if (result === true) {
                     user_.loginHistory.push({ dateTime: (new Date()).toString(), userAgent: userData.userAgent });
