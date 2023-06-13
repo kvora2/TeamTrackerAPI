@@ -1,14 +1,6 @@
 /*************************************************************************
-* BTI325– Assignment 6
-* I declare that this assignment is my own work in accordance with Seneca Academic
-Policy. No part * of this assignment has been copied manually or electronically from any
-other source
-* (including 3rd party web sites) or distributed to other students.
-*
-* Name: Kelvin Vora  Student ID: 157616210 Date: 11th Dec 2022
-*
-* Your app’s URL (from cyclic) : 
-https://panicky-toad-scrubs.cyclic.app 
+*  cyclic URL : 
+https://rose-distinct-colt.cyclic.app
 *
 **************************************************************************/
 
