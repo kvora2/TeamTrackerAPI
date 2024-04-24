@@ -1,4 +1,4 @@
-# Node.js MongoDB & Sequelize Employee Management Application 🚀
+# Employee Team Tracking Application 🚀
 
 ## Overview 🌟
 
