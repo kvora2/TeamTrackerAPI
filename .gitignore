@@ -1,1 +1,5 @@
+# dep files
 node_modules
+
+# IOS file config not needed ofc
+.DS_Store
