@@ -13,10 +13,11 @@ var userSchema = new Schema({
 });
 let User;
 
+let mongoDBConnectionString = process.env.MONGO_URL;
+
 exports.initialize = () => {
     return new Promise((res, rej) => {
-        let pass1 = encodeURIComponent("qN4Fzt7y69YQY4ON");
-        db = mongoose.createConnection(`mongodb+srv://KelvinV:${pass1}@empdata.8dltm07.mongodb.net/?retryWrites=true&w=majority`);
+        db = mongoose.createConnection(mongoDBConnectionString);
         if (db) {
             User = db.model("users", userSchema);
             res();

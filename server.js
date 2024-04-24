@@ -10,6 +10,8 @@ var exphbs = require('express-handlebars');
 const fs = require('fs');
 var clientSessions = require('client-sessions');
 var app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -329,7 +331,10 @@ app.get("*", (req, res) => {
 })
 
 data.initialize().then(dataServiceAuth.initialize).then(function () {
+    // listening for local hosting/testing
     app.listen(HTTP_PORT, onHttpStart);
 }).catch(function (err) {
     console.log("unable to start server: " + err);
 });
+
+module.exports = app; // export for deployment
