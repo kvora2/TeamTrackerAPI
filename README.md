@@ -4,6 +4,8 @@
 
 This Node.js application provides a comprehensive solution for user registration 📝, authentication 🔐, and employee management 🧑‍💼 with MongoDB as the database 📊. It allows users to register, login, manage employees 👥, departments 📁, and view login history ⏰, along with the ability to upload and view images 📷.
 
+> ⚠️ **Note**: This application is designed primarily for learning purposes and is not deployed. However, you can try it out by installing it locally and connecting it to your own MongoDB cluster. Just create an `.env` file with your MongoDB connection string (env var name: MONGO_URL), and you'll be set to go! 🛠️
+
 ## Features 🛠️
 
 ### User Authentication ✅
